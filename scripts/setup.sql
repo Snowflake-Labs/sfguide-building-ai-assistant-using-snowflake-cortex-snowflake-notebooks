@@ -85,3 +85,16 @@ FORCE = TRUE;
 
 -- make sure staged files can be seen by directory
 ALTER STAGE RAW_DATA REFRESH;
+
+-- 
+CREATE OR REPLACE NOTEBOOK ai_assistant_sales_calls_notebook
+FROM @NOTEBOOK
+MAIN_FILE = 'ai_assistant_sales_calls_notebook.ipynb'
+QUERY_WAREHOUSE = SALES_CALLS_WH;
+ALTER NOTEBOOK ai_assistant_sales_calls_notebook ADD LIVE VERSION FROM LAST;
+
+CREATE OR REPLACE STREAMLIT ai_assistant_sales_calls_chatbot
+ROOT_LOCATION = @CHATBOT_APP
+MAIN_FILE = 'chatbot.py'
+QUERY_WAREHOUSE = SALES_CALLS_WH
+COMMENT = '{"origin":"sf_sit-is", "name":"ai_assistant_sales_call", "version":{"major":1, "minor":0}, "attributes":{"is_quickstart":1, "source":"streamlit"}}';
