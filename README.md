@@ -1,4 +1,4 @@
-# AL Assistant For Sales Calls
+# AI Assistant For Sales Calls
 
 ## Overview
 TODO
