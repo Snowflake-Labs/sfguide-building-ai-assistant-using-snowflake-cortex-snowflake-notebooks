@@ -6,4 +6,4 @@
 Sales calls data is a critical asset for SaaS organizations to refine their go-to-market (GTM) strategies and improve product offerings. However, analyzing transcripts across all sales teams' calls and consolidating them into actionable insights is often a significant challenge for GTM and product teams. This demo showcases how Snowflake Notebooks + Cortex AI can address these challenges with a centralized, AI-driven approach to empower teams to gain actionable insights, enhance decision-making, and drive better alignment between product and GTM strategies. 
 
 ## Step-By-Step Guide
-For prerequisites, setup, step-by-step guide and instructions, please refer to the [QuickStart Guide]().
+For prerequisites, setup, step-by-step guide and instructions, please refer to the [QuickStart Guide](https://quickstarts.snowflake.com/guide/ai_assistant_for_sales_calls/index.html?index=..%2F..index#0).
