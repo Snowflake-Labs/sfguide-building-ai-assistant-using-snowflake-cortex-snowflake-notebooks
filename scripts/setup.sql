@@ -105,15 +105,15 @@ CREATE OR REPLACE STAGE CHATBOT_APP DIRECTORY=(ENABLE=true); --to store streamli
 -- ONCE THAT IS COMPLETE, UNCOMMENT THE FOLLOWING LINES TO RUN:
 
 -- -- Create Notebook 
-CREATE OR REPLACE NOTEBOOK ai_assistant_sales_calls_notebook
-FROM @NOTEBOOK
-MAIN_FILE = 'ai_assistant_sales_calls_notebook.ipynb' 
-QUERY_WAREHOUSE = SALES_CALLS_WH
-RUNTIME_NAME = 'SYSTEM$BASIC_RUNTIME' 
-COMPUTE_POOL = 'SYSTEM_COMPUTE_POOL_CPU'
-IDLE_AUTO_SHUTDOWN_TIME_SECONDS = 3600;
+-- CREATE OR REPLACE NOTEBOOK ai_assistant_sales_calls_notebook
+-- FROM @NOTEBOOK
+-- MAIN_FILE = 'ai_assistant_sales_calls_notebook.ipynb' 
+-- QUERY_WAREHOUSE = SALES_CALLS_WH
+-- RUNTIME_NAME = 'SYSTEM$BASIC_RUNTIME' 
+-- COMPUTE_POOL = 'SYSTEM_COMPUTE_POOL_CPU'
+-- IDLE_AUTO_SHUTDOWN_TIME_SECONDS = 3600;
 
-ALTER NOTEBOOK ai_assistant_sales_calls_notebook ADD LIVE VERSION FROM LAST;
+-- ALTER NOTEBOOK ai_assistant_sales_calls_notebook ADD LIVE VERSION FROM LAST;
 
 -- -- Create Streamlit App
 -- CREATE OR REPLACE STREAMLIT ai_assistant_sales_calls_chatbot
